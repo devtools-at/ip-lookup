@@ -1,0 +1,44 @@
+{
+  "name": "@devtools-at/ip-lookup",
+  "version": "1.0.0",
+  "description": "Look up IP address information",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ip-lookup",
+    "devtools",
+    "utility",
+    "converter",
+    "encoder",
+    "decoder"
+  ],
+  "author": "DevTools.at",
+  "license": "MIT",
+  "homepage": "https://devtools.at/tools/ip-lookup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtools-at/ip-lookup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devtools-at/ip-lookup/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
